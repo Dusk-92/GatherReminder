@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Plugin>
+  <Information>
+    <Name>GatherReminder</Name>
+    <Author>Dusk</Author>
+    <Version>1.0</Version>
+    <Description>DESCRIPTION (Français)
+
+GatherReminder vous rappelle d'activer vos compétences de détection de ressources.
+
+PREMIÈRE UTILISATION
+Glissez jusqu'à 3 compétences de détection dans les cases de la fenêtre.
+Une seule détection peut être active à la fois.
+
+UTILISATION
+Lorsque le rappel apparaît, cliquez sur la détection que vous souhaitez activer.
+Un "OK" confirme votre choix.
+La fenêtre se ferme automatiquement après ce clic.
+Clic droit sur une case : vider uniquement cette case.
+"Plus tard" : fermer le rappel temporairement.
+
+APRÈS UNE MORT
+En solo, le rappel revient après la résurrection.
+En communauté ou en raid, aucune popup automatique.
+Si vous êtes encore en combat, le rappel attend la fin du combat.
+
+COMMANDES
+/gather - afficher ou masquer
+/gr - raccourci
+/grem - raccourci
+/gather reset - vider les 3 cases
+/gather center - recentrer la fenêtre
+/gather help - afficher l'aide
+
+
+DESCRIPTION (English)
+
+GatherReminder reminds you to enable your gathering tracking skills.
+
+FIRST USE
+Drag up to 3 tracking skills into the reminder slots.
+Only one tracking skill can be active at a time.
+
+USAGE
+When the reminder appears, click the tracking skill you want to activate.
+An "OK" confirms your choice.
+The window closes automatically after that click.
+Right-click a slot: clear only that slot.
+"Later": temporarily dismiss the reminder.
+
+AFTER DEFEAT
+When solo, the reminder returns after resurrection.
+In a fellowship or raid, no automatic popup is shown.
+If you are still in combat, the reminder waits until combat ends.
+
+COMMANDS
+/gather - show or hide
+/gr - short alias
+/grem - short alias
+/gather reset - clear all 3 slots
+/gather center - recenter the window
+/gather help - display help
+
+
+DESCRIPTION (Deutsch)
+
+GatherReminder erinnert Sie daran, Ihre Suchfertigkeiten für Sammelberufe zu aktivieren.
+
+ERSTE VERWENDUNG
+Ziehen Sie bis zu 3 Suchfertigkeiten in die Felder des Erinnerungsfensters.
+Nur eine Suchfertigkeit kann gleichzeitig aktiv sein.
+
+VERWENDUNG
+Wenn die Erinnerung erscheint, klicken Sie auf die Suchfertigkeit, die Sie aktivieren möchten.
+Ein "OK" bestätigt die Auswahl.
+Danach schließt sich das Fenster automatisch.
+Rechtsklick auf ein Feld: nur dieses Feld leeren.
+"Später": Erinnerung vorübergehend schließen.
+
+NACH EINER NIEDERLAGE
+Solo erscheint die Erinnerung nach der Wiederbelebung erneut.
+In Gruppe oder Schlachtzug erscheint keine automatische Einblendung.
+Falls Sie noch im Kampf sind, wartet die Erinnerung bis zum Kampfende.
+
+BEFEHLE
+/gather - anzeigen oder ausblenden
+/gr - kurzer Alias
+/grem - kurzer Alias
+/gather reset - alle 3 Felder leeren
+/gather center - Fenster zentrieren
+/gather help - Hilfe anzeigen</Description>
+  </Information>
+  <Package>Dusk.GatherReminder.Main</Package>
+</Plugin>
