@@ -91,4 +91,5 @@ BEFEHLE
 /gather help - Hilfe anzeigen</Description>
   </Information>
   <Package>Dusk.GatherReminder.Main</Package>
+  <Configuration Apartment="GatherReminder" />
 </Plugin>
