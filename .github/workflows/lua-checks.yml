@@ -1,0 +1,39 @@
+name: GatherReminder checks
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  syntax-and-isolation:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Isolation guards
+        run: |
+          grep -F '<Version>1.0.1</Version>' GatherReminder.plugin
+          grep -F '<Configuration Apartment="GatherReminder" />' GatherReminder.plugin
+          ! grep -R -F 'function Turbine.PluginData.Load' GatherReminder
+          ! grep -R -F 'function Turbine.PluginData.Save' GatherReminder
+          ! grep -R -F 'Turbine.PluginData.Load =' GatherReminder
+          ! grep -R -F 'Turbine.PluginData.Save =' GatherReminder
+          ! grep -R -F 'Turbine.Chat.Received =' GatherReminder
+          grep -F 'Turbine.Shell.RemoveCommand' GatherReminder/Main.lua
+          grep -F 'removeCallback(player, "MoraleChanged"' GatherReminder/Main.lua
+          grep -F 'removeCallback(player, "InCombatChanged"' GatherReminder/Main.lua
+
+      - name: Install Lua 5.1
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y lua5.1
+
+      - name: Compile Lua
+        run: find GatherReminder -type f -name '*.lua' -print0 | xargs -0 -n1 luac5.1 -p
+
+      - name: Validate plugin XML
+        run: python3 -c "import xml.etree.ElementTree as ET; ET.parse('GatherReminder.plugin')"
