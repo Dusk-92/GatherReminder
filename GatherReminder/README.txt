@@ -1,4 +1,4 @@
-GatherReminder 1.0
+GatherReminder 1.0.1
 ==================
 
 Languages: English / Français / Deutsch
